@@ -1,21 +1,23 @@
-const orm = require("../config/orm.js");
-
-const bgr = {
-    all: (cb) => {
-        orm.all("burgers", (res) => {
-            cb(res);
-        });
-    },
-    add: (cols, vals, cb) => {
-        orm.add("burgers", cols, vals, (res) => {
-            cb(res);
-        });
-    },
-    up: (colval, con, cb) => {
-        orm.oneUP("burgers", colval, con, (res) => {
-            cb(res);
-        });
-    }
+module.exports = (sequelize, Dt) => {
+    let Bgr = sequelize.define ("Bgr", {
+        name: {
+            type: Dt.STRING,
+            allowNull: false,
+            validate: {
+                len: {
+                    args: [1,200],
+                    msg: "Name must not be blank and less than 200 characters"
+                }
+            }
+        },
+        type: { type: Dt.STRING },
+        topping: { type: Dt.STRING },
+        sauce: { type: Dt.STRING },
+        eaten: { 
+            type: Dt.BOOLEAN,
+            allowNull: false,
+            defaultValue: false
+        },
+    });
+    return Bgr;
 }
-
-module.exports = bgr;

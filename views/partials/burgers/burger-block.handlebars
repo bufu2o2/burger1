@@ -1,0 +1,27 @@
+<li>
+    
+        {{#if eaten}}
+        <button class = "change-eaten" data-id = "{{id}}" data-neweaten = "{{eaten}}">
+            <div id = "topbtn">
+
+                <img id = "bunt" src="/assets/img/parts/bunt.png" alt="bun top">
+                <img id = "sauce" src="/assets/img/parts/{{sauce}}.png" alt="sauce">
+                <img id = "topping" src="/assets/img/parts/{{topping}}.png" alt="topping">
+                <img id = "type" src="/assets/img/parts/{{type}}.png" alt="type">
+                <img id = "bunb" src="/assets/img/parts/bunb.png" alt="bun bottom">
+            </div>
+        </button>
+         <h3>{{name}}</h3>
+        {{else}}
+        <div id = "wrapperEaten">
+                <div id = "topbtn">
+                    <img id = "bunt" src="/assets/img/parts/bunt.png" alt="bun top">
+                    <img id = "sauce" src="/assets/img/parts/{{sauce}}.png" alt="sauce">
+                    <img id = "topping" src="/assets/img/parts/{{topping}}.png" alt="topping">
+                    <img id = "type" src="/assets/img/parts/{{type}}.png" alt="type">
+                    <img id = "bunb" src="/assets/img/parts/bunb.png" alt="bun bottom">
+                </div>
+            </div>
+             <h3>{{name}}</h3>
+        {{/if}}
+</li>

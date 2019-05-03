@@ -1,0 +1,195 @@
+html, body {
+    height: 95%;
+    width: 100%;
+    font-size: 12px;
+    position: relative;
+    background-image: url("../img/bg.jpg");
+    background-size: 50%;
+    background-repeat: repeat-x repeat-y;
+}
+#header{
+    display: grid;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+    margin: 20px;
+    font-size: 50px;
+    font-weight: bold;
+}
+#logo{
+    width: 300px;
+    height: 300px;
+}
+.change-eaten{
+    background-color: transparent;
+    position: relative;
+    outline: none;
+    border-radius: 10px;
+}
+.change-eaten:hover{
+    border: 2px inset grey;
+    cursor: pointer;
+}
+#item, #eaten-item{
+    width: 50px;
+    height: 50px;
+}
+#eaten-item{
+    opacity: .5;
+}
+#main{
+    display: grid;
+    grid-template-columns: 3fr 1fr 3fr;
+    align-items: center;
+    justify-items: center;
+}
+#left ul, #right ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+#burgers li, #eaten li{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+#make {
+    position: absolute;
+    display: none;
+    width: 500px;
+    height: 300px;
+    background-color: tan;
+    border-radius: 5px;
+    border: solid 3px orange;
+    top: calc(50% - 150px);
+    left: calc(50% - 250px);
+    z-index: 10;
+}
+#close{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    background: transparent;
+    font-size: 20px;
+    font-weight: bold;
+    outline: none;
+}
+#make #wrapper #top, #topbtn{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+#topbtn{
+    width: 50px;
+    height: 50px;
+    z-index: 9;
+}
+#topbtn img{
+    width: 45px;
+    position: absolute;
+    left: calc(50% - 22.5px);
+}
+#topbtn #bunt{
+    z-index: 8;
+    top: 5px;
+}
+#topbtn #sauce{
+    z-index: 7;
+    top: 10px;
+}
+#topbtn #topping{
+    z-index: 6;
+    top: 10px;
+}
+#topbtn #type{
+    z-index: 5;
+    top: 17px;
+}
+#topbtn #bunb{
+    z-index: 4;
+    top: 25px;
+}
+#make #wrapper #top img{
+    width: 200px;
+    position: absolute;
+    left: calc(50% - 100px);
+}
+#bunt{
+    z-index: 20;
+    top: 25px;
+}
+#sauce{
+    z-index: 19;
+    top: 50px;
+}
+#topping{
+    z-index: 18;
+    top: 45px;
+}
+#type{
+    z-index: 17;
+    top: 70px;
+}
+#bunb{
+    z-index: 16;
+    top: 95px;
+}
+#make #wrapper #bottom {
+    position: absolute;
+    width: 450px;
+    bottom: 10px;
+    left: calc(50% - 225px);
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+}
+#make #wrapper #bottom button{
+    font-size: 10px;
+    background: rgba(255, 255, 255, .85);
+    outline: none;
+    border-radius: 5px;
+}
+#add {
+    position: absolute;
+    background: transparent;
+    outline: none;
+    border-radius: 10px;
+    width: 45px;
+    height: 45px;
+    top: 15px;
+    left: 15px;
+}
+#makebtn{
+    background: transparent;
+    border-radius: 10px;
+    font-size: 80px;
+    font-weight: bold;
+    color: rgba(161, 250, 161, .5);
+}
+#makebtn:hover{
+    cursor: pointer;
+    color: rgba(161, 250, 161, 1);
+}
+#eaten li{
+    background-color: transparent;
+    position: relative;
+    outline: none;
+    border-radius: 10px;
+}
+#namein {
+    position: absolute;
+    width: 200px;
+    height: 20px;
+    border-radius: 5px;
+    background: transparent;
+    outline: none;
+    top: 5px;
+    left: calc(50% - 100px);
+    text-align: center;
+}
+#ninja{
+    display: none;
+}

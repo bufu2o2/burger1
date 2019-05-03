@@ -1,0 +1,68 @@
+<div id = "header">
+    <img id = 'logo' src="/assets/img/logo.png" alt="logo">
+</div>
+
+ <div id = "make">
+    <form class = "create-form" action="POST">
+        <div id = "ninja" class = "form-group">
+            <input id = "name" type="text" name = "name" value = "jon snow">
+            <input id = "sauce" type="text" name = "sauce" value = "mayo">
+            <input id = "topping" type="text" name = "topping" value = "lettuce">
+            <input id = "type" type="text" name = "type" value = "salmon">
+        </div>
+        <button id = 'add' type = "submit"><i class="fas fa-plus"></i>  <i class="fas fa-hamburger"></i></button>
+    </form>
+    <div id = 'wrapper'>
+        <button id = 'close'>x</button>
+        
+        <div id = "top">
+            <input id = "namein" placeholder="Jon Snow" value = "Jon Snow">
+            <img id = "bunt" src="/assets/img/parts/bunt.png" alt="bun top">
+            <img id = "sauce" data = "mayo" src="/assets/img/parts/mayo.png" alt="sauce">
+            <img id = "topping" data = "lettuce" src="/assets/img/parts/lettuce.png" alt="topping">
+            <img id = "type" data = "salmon" src="/assets/img/parts/salmon.png" alt="type">
+            <img id = "bunb" src="/assets/img/parts/bunb.png" alt="bun bottom">
+        </div>
+        <div id = "bottom">
+            <button id = "sau" data = "ketchup">Ketchup</button>
+            <button id = "sau" data = "mayo">Mayo</button>
+            <button id = "sau" data = "siracha">Siracha</button>
+            <button id = "sau" data = "egg">Egg</button>
+            <button id = "top" data = "cheese">Cheese</button>
+            <button id = "top" data = "lettuce">Lettuce</button>
+            <button id = "top" data = "mushrooms">Mushrooms</button>
+            <button id = "top" data = "pickles">Pickles</button>
+            <button id = "top" data = "tomato">Tomato</button>
+            <button id = "typ" data = "salmon">Salmon</button>
+            <button id = "typ" data = "impossible">Impossible Burger</button>
+            <button id = "typ" data = "tofu">Tofu</button>
+        </div>
+    </div>
+</div>
+
+<div id = "main">
+    <div id = "left">
+        <ul id = "burgers">
+            {{#each burgers}}
+                {{#unless eaten}}
+                    {{> burgers/burger-block eaten=true}}
+                {{/unless}}
+            {{/each}}
+        </ul>
+    </div>
+    <div id = "mid">
+        <i class="fas fa-plus-square" id = "makebtn"></i>
+    </div>
+    <div id = "right">
+        <ul id = "eaten">
+            {{#each burgers}}
+                {{#if eaten}}
+                    {{> burgers/burger-block eaten=false}}
+                {{/if}}
+            {{/each}}
+        </ul>
+    </div>
+</div>
+
+
+

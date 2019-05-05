@@ -58,7 +58,7 @@ $(() => {
             data: newBurger
         }).then(() => {
             console.log("New Burger Created");
-            location.reload();
+            location.reload(forceGet = true);
         });
     });
 
@@ -70,7 +70,7 @@ $(() => {
             data: id,
         }).then( () => {
             console.log("Ate The Burger!");
-            location.reload();
+            location.reload(forceGet = true);
         })
     })
 

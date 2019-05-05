@@ -1,5 +1,5 @@
 module.exports = (sequelize, Dt) => {
-    let Bgr = sequelize.define ("Bgr", {
+    let Bgr = sequelize.define ("burgers", {
         name: {
             type: Dt.STRING,
             allowNull: false,
@@ -17,7 +17,7 @@ module.exports = (sequelize, Dt) => {
             type: Dt.BOOLEAN,
             allowNull: false,
             defaultValue: false
-        },
+        }
     });
     return Bgr;
 }

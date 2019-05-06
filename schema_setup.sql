@@ -1,4 +1,4 @@
-USE vkpjt9hm4ozd91hd;
+USE oakvm8l16xv3dcnv;
 
 CREATE TABLE burgers(
     id INT NOT NULL AUTO_INCREMENT,
@@ -10,6 +10,8 @@ CREATE TABLE burgers(
     createdAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (id)
 );
+
+
 
 INSERT INTO burgers (name, type, topping, sauce) VALUES ('bob', 'salmon', 'lettuce', 'mayo');
 INSERT INTO burgers (name, type, topping, sauce, eaten) VALUES ('jimmy', 'impossible', 'cheese', 'ketchup', true);
